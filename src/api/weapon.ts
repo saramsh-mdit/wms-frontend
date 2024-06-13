@@ -66,3 +66,10 @@ export const updateWeaponById = (id: string, data: unknown) => {
 
 export const deleteWeaponById = (id: string) =>
   axiosInstance.delete(`/weapons/${id}`);
+
+/*
+    Buy Weapons
+*/
+
+export const postBuyWeapons = (id: string, quantity: number) =>
+  axiosInstance.post(`/buy/${id}?quantity=${quantity}`);
